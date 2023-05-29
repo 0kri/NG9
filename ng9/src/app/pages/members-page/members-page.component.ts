@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MembersService } from 'src/app/services/members.service';
 
 @Component({
   selector: 'app-members-page',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class MembersPageComponent {
 
+  constructor(
+    public membersService: MembersService
+  ){}
 }

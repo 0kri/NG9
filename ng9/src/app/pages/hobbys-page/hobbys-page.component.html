@@ -1,1 +1,7 @@
-<p>hobbys-page works!</p>
+<div class="container" formArrayName="hobbys">
+    <h1>LOST</h1>
+    <button (click)="addHobbys()">ADD HOBBY</button>
+    <div *ngFor="let hobby of hobbys.controls; let i = index">
+        <input type="text" [formControlName]="i">
+    </div>
+</div>

@@ -1,1 +1,5 @@
-<p>members-page works!</p>
+<div class="row">
+    <div class="col-3" *ngFor="let member of membersService.members">
+        <app-card [membersData]="member"></app-card>
+    </div>
+</div>

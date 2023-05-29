@@ -8,6 +8,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { MembersPageComponent } from './pages/members-page/members-page.component';
 import { ListsPageComponent } from './pages/lists-page/lists-page.component';
 import { HobbysPageComponent } from './pages/hobbys-page/hobbys-page.component';
+import { CardComponent } from './components/card/card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { HobbysPageComponent } from './pages/hobbys-page/hobbys-page.component';
     FooterComponent,
     MembersPageComponent,
     ListsPageComponent,
-    HobbysPageComponent
+    HobbysPageComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
