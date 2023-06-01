@@ -17,10 +17,10 @@
     </div>
 
     <div class="container" formArrayName="hobbys">
-        <h1>Hobbys</h1>
+        <h4>Hobbys</h4>
         <div class="mb-3" *ngFor="let hobby of hobbys.controls; let i = index">
             <div class="col-10">
-                <input type="text" [formControlName]="i" placeholder="Hobby" class="form-control">
+                <input type="text" [formControlName]="i" placeholder="Enter your Number {{i + 1}} hobby" class="form-control">
             </div>
             <div class="col-2">
                 <button (click)="removeHobby(i)" class="btn btn-danger btn-block">Remove</button>
