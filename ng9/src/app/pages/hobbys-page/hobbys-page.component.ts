@@ -1,5 +1,7 @@
+import { formatCurrency } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormArray, FormControl, FormGroup} from '@angular/forms'
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-hobbys-page',
@@ -7,23 +9,35 @@ import { FormBuilder, Validators, FormArray, FormControl, FormGroup} from '@angu
   styleUrls: ['./hobbys-page.component.css']
 })
 export class HobbysPageComponent {
-  public profileForm = this.fb.group({
-    firstName: ['', [Validators.required]],
-    lastName: [''],
-    hobbys: this.fb.array([
-      this.fb.control('')
-    ])
-  })
+
+  public profileForm!: FormGroup; 
 
   constructor(
     private fb: FormBuilder
   ) { }
   
-  get hobbys() {
-    return this.profileForm.get('hobbys') as FormArray
+  ngOnInit(): void {
+
+    this.profileForm = this.fb.group({
+      firstName: ['', [Validators.required]],
+      lastName: [''],
+      hobbys: this.fb.array([])
+    })
+
   }
 
-  addHobbys() {
-    this.hobbys.push(this.fb.control(''))
+
+
+  get hobbys() {
+    return this.profileForm.controls['hobbys'] as FormArray
   }
+
+  addHobby() {
+    this.hobbys.push(new FormControl('', [Validators.required]))
+  }
+
+  removeHobby(i: number):void {
+    this.hobbys.removeAt(i)
+  }
+
 }
