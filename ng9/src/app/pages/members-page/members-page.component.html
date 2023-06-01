@@ -1,5 +1,7 @@
 <div class="row">
     <div class="col-3" *ngFor="let member of membersService.members">
-        <app-card [membersData]="member"></app-card>
+        <a routerLink="/details/{{member.id}}" class="text-decoration-none">
+            <app-card [membersData]="member"></app-card>
+        </a>
     </div>
 </div>

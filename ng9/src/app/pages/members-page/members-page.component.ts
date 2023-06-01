@@ -9,6 +9,6 @@ import { MembersService } from 'src/app/services/members.service';
 export class MembersPageComponent {
 
   constructor(
-    public membersService: MembersService
+    public membersService: MembersService,
   ){}
 }
