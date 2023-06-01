@@ -10,6 +10,7 @@ import { ListsPageComponent } from './pages/lists-page/lists-page.component';
 import { HobbysPageComponent } from './pages/hobbys-page/hobbys-page.component';
 import { CardComponent } from './components/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MembersDetailsPageComponent } from './pages/members-details-page/members-details-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MembersPageComponent,
     ListsPageComponent,
     HobbysPageComponent,
-    CardComponent
+    CardComponent,
+    MembersDetailsPageComponent
   ],
   imports: [
     BrowserModule,
