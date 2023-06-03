@@ -27,8 +27,8 @@ export class MembersService {
     },
     {
       id: 4,
-      name: 'Daviti Beridze',
-      surname: 'Metonidze',
+      name: 'Daviti',
+      surname: 'Beridze',
       img:'https://alchetron.com/cdn/charlie-pace-4682b6b8-6513-4fa0-8095-9a56524ff26-resize-750.jpeg'
     },
     {
