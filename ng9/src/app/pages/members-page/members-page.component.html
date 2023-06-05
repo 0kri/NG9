@@ -1,5 +1,9 @@
+<div class="container">
+    <input type="text" [formControl]="search" class="form-control">
+</div>
+
 <div class="row">
-    <div class="col-3" *ngFor="let member of membersService.members">
+    <div class="col-3" *ngFor="let member of filteredMembers">
         <a routerLink="/details/{{member.id}}" class="text-decoration-none">
             <app-card [membersData]="member"></app-card>
         </a>
