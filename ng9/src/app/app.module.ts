@@ -11,6 +11,9 @@ import { HobbysPageComponent } from './pages/hobbys-page/hobbys-page.component';
 import { CardComponent } from './components/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MembersDetailsPageComponent } from './pages/members-details-page/members-details-page.component';
+import { AuthPageComponent } from './pages/auth-page/auth-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { MembersDetailsPageComponent } from './pages/members-details-page/member
     ListsPageComponent,
     HobbysPageComponent,
     CardComponent,
-    MembersDetailsPageComponent
+    MembersDetailsPageComponent,
+    AuthPageComponent,
+    LoginPageComponent,
+    RegisterPageComponent
   ],
   imports: [
     BrowserModule,
