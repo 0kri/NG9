@@ -7,6 +7,7 @@ import { MembersDetailsPageComponent } from './pages/members-details-page/member
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 const routes: Routes = [
   { path: 'members', component: MembersPageComponent, title: 'Members' },
@@ -19,7 +20,8 @@ const routes: Routes = [
       { path: 'login', component: LoginPageComponent, title: 'Login' },
       { path: 'register', component: RegisterPageComponent, title: 'register'}
     ]
-  }
+  },
+  { path: '**', component: NotFoundPageComponent, title: 'Not Found Page 404'}
 ];
 
 @NgModule({
