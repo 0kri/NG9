@@ -8,10 +8,13 @@ import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { ListsListPageComponent } from './pages/lists-list-page/lists-list-page.component';
 
 const routes: Routes = [
   { path: 'members', component: MembersPageComponent, title: 'Members' },
   { path: 'lists', component: ListsPageComponent, title: 'Lists' },
+  { path: 'lists/:id', component: ListsListPageComponent, title: 'Lists list' },
+
   { path: 'hobbys', component: HobbysPageComponent, title: 'Hobbys' },
   { path: 'details/:id', component: MembersDetailsPageComponent, title: 'Member Details' },
   {

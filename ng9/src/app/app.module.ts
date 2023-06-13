@@ -15,6 +15,8 @@ import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ListsListPageComponent } from './pages/lists-list-page/lists-list-page.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
     AuthPageComponent,
     LoginPageComponent,
     RegisterPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    ListsListPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
