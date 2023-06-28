@@ -8,7 +8,7 @@ export const authGuard: CanActivateFn = (route, state) => {
   const user = JSON.parse(localStorage.getItem('user')!)
 
   if (user) {
-    _router.navigateByUrl('/members')
+    _router.navigateByUrl('/profile')
     return false
   }
 

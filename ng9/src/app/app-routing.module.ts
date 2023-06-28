@@ -10,6 +10,7 @@ import { RegisterPageComponent } from './pages/auth-page/register-page/register-
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { ListsListPageComponent } from './pages/lists-list-page/lists-list-page.component';
 import { authGuard } from './guards/auth.guard';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
  
 const routes: Routes = [
   { path: 'members', component: MembersPageComponent, title: 'Members' },
@@ -26,7 +27,8 @@ const routes: Routes = [
       { path: 'register', component: RegisterPageComponent, title: 'register'}
     ]
   },
-  { path: '**', component: NotFoundPageComponent, title: 'Not Found Page 404'}
+  { path: 'profile', component: ProfilePageComponent, title: 'Your Profile Page'},
+  { path: '**', component: NotFoundPageComponent, title: 'Not Found Page 404' },
 ];
 
 @NgModule({

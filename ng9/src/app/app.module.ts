@@ -17,6 +17,7 @@ import { RegisterPageComponent } from './pages/auth-page/register-page/register-
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListsListPageComponent } from './pages/lists-list-page/lists-list-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ListsListPageComponent } from './pages/lists-list-page/lists-list-page.
     RegisterPageComponent,
     NotFoundPageComponent,
     ListsListPageComponent,
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,4 +18,10 @@ export class AuthService {
       })
     )
   }
+
+  getToken():string {
+    const user = JSON.parse(localStorage.getItem('user')!)
+    return user.token
+  }
+
 }
