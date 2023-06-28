@@ -28,7 +28,7 @@ export class LoginPageComponent implements OnInit {
   submit() {
     this._authService.login(this.form.value).subscribe(
       res => {
-        this._router.navigateByUrl('/')
+        this._router.navigateByUrl('/hobbys')
       },
       err => {
         console.log(err.error);

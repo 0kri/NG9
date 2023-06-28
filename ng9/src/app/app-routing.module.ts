@@ -9,6 +9,7 @@ import { LoginPageComponent } from './pages/auth-page/login-page/login-page.comp
 import { RegisterPageComponent } from './pages/auth-page/register-page/register-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { ListsListPageComponent } from './pages/lists-list-page/lists-list-page.component';
+import { authGuard } from './guards/auth.guard';
  
 const routes: Routes = [
   { path: 'members', component: MembersPageComponent, title: 'Members' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'details/:id', component: MembersDetailsPageComponent, title: 'Member Details' },
   {
     path: 'auth', component: AuthPageComponent, title: 'Authorization',
+    canActivate: [authGuard],
     children: [
       { path: 'login', component: LoginPageComponent, title: 'Login' },
       { path: 'register', component: RegisterPageComponent, title: 'register'}
