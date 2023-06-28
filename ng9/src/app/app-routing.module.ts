@@ -5,8 +5,8 @@ import { ListsPageComponent } from './pages/lists-page/lists-page.component';
 import { HobbysPageComponent } from './pages/hobbys-page/hobbys-page.component';
 import { MembersDetailsPageComponent } from './pages/members-details-page/members-details-page.component';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LoginPageComponent } from './pages/auth-page/login-page/login-page.component';
+import { RegisterPageComponent } from './pages/auth-page/register-page/register-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { ListsListPageComponent } from './pages/lists-list-page/lists-list-page.component';
  

@@ -1,0 +1,11 @@
+<div class="card" [formGroup]="form">
+    <div class="card-body">
+        <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Password" formControlName="password">
+        </div>
+        <button (click)="submit()" [disabled]="form.invalid" class="btn btn-primary w-100">Login</button>
+    </div>
+</div>
