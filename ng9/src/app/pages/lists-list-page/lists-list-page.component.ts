@@ -10,7 +10,7 @@ import { HomeService } from 'src/app/services/home.service';
 })
 export class ListsListPageComponent implements OnInit {
 
-  lists$!: Observable<any>
+  listslist$!: Observable<any>
 
   constructor(
     private _route: ActivatedRoute,
@@ -19,15 +19,16 @@ export class ListsListPageComponent implements OnInit {
   
   ngOnInit(): void {
 
-    this._route.params.subscribe(
-      res => console.log(res)
-    )
+    // this._route.params.subscribe(
+    //   params => console.log(params)
+    // )
 
-    this.lists$ = this._route.params.pipe(
+    this.listslist$ = this._route.params.pipe(
       switchMap(params => {
         console.log(params);
         return this._homeService.getListData(params['id'])
       })
     )
   }
+
 }

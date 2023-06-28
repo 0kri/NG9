@@ -1,9 +1,17 @@
 <ng-container *ngIf="lists$ | async as data">
-    <a *ngFor="let card of data" routerLink="/lists/{{card._id}}" class="col-lg-4">
-        <div class="card"> 
-            <img src="https://val-do.com/{{card.img}}" alt="asd">
-            <h3>{{ card.title }}</h3>
-            <p [innerHTML]="card.descr"></p>
+    <div class="container column">
+
+        <div class="col-md-4 mb-3" *ngFor="let card of data">
+
+            <a class="text-decoration-none" routerLink="/lists/{{card._id}}">     
+                <img src="https://val-do.com/{{card.img}}" alt="asd">
+                <div class="card-body">
+                    <h3>{{ card.title }}</h3>
+                    <p [innerHTML]="card.descr"></p>
+                </div>
+            </a>
+    
         </div>
-    </a>
+
+    </div>
 </ng-container>
