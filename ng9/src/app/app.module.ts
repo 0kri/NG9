@@ -15,9 +15,10 @@ import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { LoginPageComponent } from './pages/auth-page/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/auth-page/register-page/register-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ListsListPageComponent } from './pages/lists-list-page/lists-list-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,13 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

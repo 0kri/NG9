@@ -19,6 +19,14 @@ export class AuthService {
     )
   }
 
+  register(data:any): Observable<any> {
+    return this._http.post('http://localhost:8000/api/registration', data).pipe(
+      tap(data => {
+        console.log(data)
+      })
+    )
+  }
+
   getToken():string {
     const user = JSON.parse(localStorage.getItem('user')!)
     return user.token

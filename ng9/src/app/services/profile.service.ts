@@ -14,10 +14,12 @@ export class ProfileService {
   ) { }
 
   getProfile(): Observable<any> {
-    return this._http.get('http://localhost:8000/api/user', {
-      headers: new HttpHeaders({
-        'x-auth-token': this._authService.getToken()
-      })
-    } )
+    return this._http.get('http://localhost:8000/api/user')
   }
 }
+
+// {
+//       headers: new HttpHeaders({
+//         'x-auth-token': this._authService.getToken()
+//       })
+//     } 

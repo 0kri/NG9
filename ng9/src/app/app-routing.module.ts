@@ -27,7 +27,7 @@ const routes: Routes = [
       { path: 'register', component: RegisterPageComponent, title: 'register'}
     ]
   },
-  { path: 'profile', component: ProfilePageComponent, title: 'Your Profile Page'},
+  { path: 'profile', component: ProfilePageComponent, title: 'Your Profile'},
   { path: '**', component: NotFoundPageComponent, title: 'Not Found Page 404' },
 ];
 
